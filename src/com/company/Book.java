@@ -21,6 +21,8 @@ public class Book {
         this.description = description;
     }
 
+    //sets title and gets title author description ect
+
     public void setTitle(String title){
         this.title = title;
     }
@@ -53,6 +55,7 @@ public class Book {
         return price;
     }
 
+    //these come from the user input in BookApp
     public void setInStock(boolean isInStock){
         this.isInStock = isInStock;
     }
@@ -68,11 +71,11 @@ public class Book {
     public int getNumberOfBooks(){
         return numBooks;
     }
-
+    //calculates price based on the user inputs in BookApp
     public double calcPrice(){
         return price * numBooks;
     }
-
+    //method to display author title description and price
     public String getDisplayText(){
         return "Author: " + getAuthor() + "\n Title: " + getTitle() + "\n Description: " + getDescription() + "\n Price: " + getPrice();
     }
