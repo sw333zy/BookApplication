@@ -6,6 +6,7 @@ public class Book {
     private String description = "";
     private double price = 0;
     private boolean isInStock = false;
+    private int numBooks = 0;
 
     //constructor
     public Book(){
@@ -54,6 +55,22 @@ public class Book {
 
     public void setInStock(boolean isInStock){
         this.isInStock = isInStock;
+    }
+
+    public boolean getInStock(){
+        return isInStock;
+    }
+
+    public void setNumBooks(int numBooks){
+        this.numBooks = numBooks;
+    }
+
+    public int getNumberOfBooks(){
+        return numBooks;
+    }
+
+    public double calcPrice(){
+        return price * numBooks;
     }
 
     public String getDisplayText(){
